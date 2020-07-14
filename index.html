@@ -20,19 +20,30 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- <link rel="Stylesheet" href=" " text="" javascript="" src="https://code.jquery.com/jquery-1.12.3.js" target="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" /> -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
     <!--===============================================================================================-->
+    <!-- <script>
+        $(document).ready(function() {
+                    $('#dtBasicExample').DataTable();
+                    $('.dataTables_length').addClass('bs-select');
+                }
+    </script> -->
 </head>
 
-<body onload="myFunction()">
-
+<body onLoad="myFunction()">
     <div class="limiter">
         <div class="container-table100">
             <div class="wrap-table100">
                 <div class="table100">
-                    <table id="table" style="color: azure;">
-                        <thead>
-                            <tr class="table100-head">
 
+                    <table id="dtBasicExample" style="color: azure; ">
+                        <thead>
+                            <tr class=" table100-head ">
+                                <th>Rank</th>
                                 <th>Name</th>
                                 <th>Points</th>
 
@@ -43,17 +54,26 @@
 
                         </tbody>
                     </table>
-                    <!-- <button type="button" onclick="myFunction()">View Points</button> -->
+                    <!-- <button onclick="myView()">VIEW RESULT</button> -->
+
                     <script>
                         function compare(a, b) {
-                            if (a.points > b.points) return 1;
-                            if (b.points > a.points) return -1;
+                            if (a.points < b.points) return 1;
+                            if (b.points < a.points) return -1;
 
                             return 0;
                         }
 
+                        // function myView() {
+                        //     document.getElementById('dtBasicExample').style.visibility = 'visible';
+                        //     $('#dtBasicExample').DataTable();
+                        //     $('.dataTables_length').addClass('bs-select');
+
+                        // }
+
                         function myFunction() {
-                            var table = document.getElementById("table");
+
+                            var table = document.getElementById("dtBasicExample");
                             let data = [{
                                     name: 'Sebin George',
                                     points: 6
@@ -61,10 +81,10 @@
                                     name: 'Abin Abraham',
                                     points: 12
                                 }, {
-                                    name: 'jfojweofj jqeofijwefjowjf',
+                                    name: 'Toncy Thomas',
                                     points: 45
                                 }, {
-                                    name: 'OOkla',
+                                    name: 'Solomon Jose',
                                     points: 2
                                 }
 
@@ -77,16 +97,26 @@
                             for (let i = 1; i <= data.length; i++) {
                                 var row = table.insertRow(i);
 
-                                // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+                                // Insert new cells (<td> elements) at the 1st and 2nd position of the "new " <tr> element:
                                 var cell1 = row.insertCell(0);
                                 var cell2 = row.insertCell(1);
+                                var cell3 = row.insertCell(2);
 
                                 // Add some text to the new cells:
-                                cell1.innerHTML = data[i - 1].name;
-                                cell2.innerHTML = data[i - 1].points;
+                                cell1.innerHTML = i;
+                                cell2.innerHTML = data[i - 1].name;
+                                cell3.innerHTML = data[i - 1].points;
                             }
+
                         }
+
+                        // function onclick() {
+                        //     $(document).ready(function() {
+
+                        //     });
+                        // }
                     </script>
+
                 </div>
             </div>
         </div>
@@ -97,30 +127,30 @@
     <!-- <script>
 
 
-        var table = document.getElementById("table");
+        var table = document.getElementById("table ");
 
         // Create an empty <tr> element and add it to the 1st position of the table:
         for (let i = 1; i < 4; i++) {
             var row = table.insertRow(i);
 
-            // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+            // Insert new cells (<td> elements) at the 1st and 2nd position of the "new " <tr> element:
             var cell1 = row.insertCell(0);
             var cell2 = row.insertCell(1);
 
             // Add some text to the new cells:
-            cell1.innerHTML = "NEW CELL1";
-            cell2.innerHTML = "NEW CELL2";
+            cell1.innerHTML = "NEW CELL1 ";
+            cell2.innerHTML = "NEW CELL2 ";
         }
     </script> -->
     <!--===============================================================================================-->
-    <!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
+    <!-- <script src="vendor/jquery/jquery-3.2.1.min.js "></script> -->
     <!--===============================================================================================-->
-    <!-- <script src="vendor/bootstrap/js/popper.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
+    <!-- <script src="vendor/bootstrap/js/popper.js "></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js "></script> -->
     <!--===============================================================================================-->
-    <!-- <script src="vendor/select2/select2.min.js"></script> -->
+    <!-- <script src="vendor/select2/select2.min.js "></script> -->
     <!--===============================================================================================-->
-    <!-- <script src="js/main.js"></script> -->
+    <!-- <script src="js/main.js "></script> -->
 
 </body>
 
