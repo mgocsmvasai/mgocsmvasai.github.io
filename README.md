@@ -1,2 +1,2 @@
-# VasaiMgocsm.github.io
+# mgocsmvasai.github.io
 A repository for hosting a points table
